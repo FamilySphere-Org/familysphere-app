@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamilySphere - نموذج الانضمام الذكي</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background-color: #f4f6f9;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+        .container {
+            background: #ffffff;
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            width: 100%;
+            max-width: 400px;
+        }
+        h2 {
+            color: #1e3a8a;
+            text-align: center;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            color: #374151;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+        input, select {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #d1d5db;
+            border-radius: 8px;
+            box-sizing: border-box;
+            font-size: 1rem;
+            outline: none;
+            transition: border-color 0.2s;
+        }
+        input:focus, select:focus {
+            border-color: #2563eb;
+        }
+        button {
+            width: 100%;
+            background-color: #2563eb;
+            color: white;
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.2s;
+        }
+        button:hover {
+            background-color: #1d4ed8;
+        }
+        .success-msg {
+            display: none;
+            background-color: #d1fae5;
+            color: #065f46;
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>انضمام إلى FamilySphere</h2>
+    <form id="joinForm" onsubmit="handleFormSubmit(event)">
+        <div class="form-group">
+            <label for="fullname">الاسم الكامل</label>
+            <input type="text" id="fullname" required placeholder="أدخل اسمك الثلاثي">
+        </div>
+        
+        <div class="form-group">
+            <label for="email">البريد الإلكتروني الآمن</label>
+            <input type="email5" id="email" required placeholder="name@example.com">
+        </div>
+
+        <div class="form-group">
+            <label for="relation">صلة القرابة / الفئة</label>
+            <select id="relation" required>
+                <option value="">اختر الفئة...</option>
+                <option value="family">أحد أفراد العائلة</option>
+                <option value="guest">زائر / مهتم بالمنصة</option>
+                <option value="partner">شريك / داعم</option>
+            </select>
+        </div>
+
+        <button type="submit">إرسال طلب الانضمام</button>
+    </form>
+
+    <div id="successMessage" class="success-msg">
+        تم إرسال طلبك بنجاح! سيتم مراجعته وتفعيل حسابك قريباً.
+    </div>
+</div>
+
+<script>
+    function handleFormSubmit(event) {
+        event.preventDefault();
+        document.getElementById('joinForm').style.display = 'none';
+        document.getElementById('successMessage').style.display = 'block';
+    }
+</script>
+
+</body>
+</html>
