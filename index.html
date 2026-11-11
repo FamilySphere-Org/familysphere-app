@@ -2,22 +2,69 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <title>FamilySphere - منصة العائلة العالمية</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FamilySphere - منصة العائلة العالمية</title>
     <style>
-        body { font-family: Tahoma, sans-serif; background: linear-gradient(135deg, #1e3c72, #2a5298); color: #fff; text-align: center; padding: 20px; margin: 0; }
-        .card { background: rgba(255,255,255,0.1); backdrop-filter:blur(10px); border-radius: 15px; padding: 20px; margin-top: 20px; box-shadow: 0 8px 32px 0 rgba(0,0,0,0.37); }
-        h1 { font-size: 22px; color: #4cd137; }
-        p { font-size: 14px; line-height: 1.6; }
-        .btn { background: #4cd137; color: #fff; border: none; padding: 12px 20px; border-radius: 25px; font-size: 16px; font-weight: bold; margin-top: 15px; width: 100%; cursor: pointer; }
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            background: linear-gradient(135deg, #1e3a8a, #2563eb);
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 420px;
+            text-align: center;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        h1 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: #ffffff;
+        }
+        h3 {
+            font-size: 1.2rem;
+            margin-bottom: 25px;
+            color: #d1fae5;
+        }
+        .btn {
+            display: inline-block;
+            background-color: #22c55e;
+            color: white;
+            padding: 14px 28px;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(34, 197, 94, 0.3);
+            transition: background-color 0.2s, transform 0.1s;
+        }
+        .btn:hover {
+            background-color: #16a34a;
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
-    <h1>FamilySphere - منصة العائلة العالمية</h1>
-    <div class="card">
-        <h3>🌐 النظام نشط وجاهز</h3>
-        <p>تم تفعيل منصة العائلة العالمية بنجاح لاستقبال الزوار وتتبع الأداء.</p>
-        <button class="btn" onclick="alert('أهلاً بك في FamilySphere - النظام يعمل بكفاءة تامة!')">دخول المنصة</button>
-    </div>
+
+<div class="card">
+    <h1>FamilySphere</h1>
+    <h3>منصة العائلة العالمية</h3>
+    <p style="margin-bottom: 25px; color: #e2e8f0; font-size: 0.95rem;">
+        🌐 النظام نشط وجاهز لاستقبال الزوار وتتبع الأداء.
+    </p>
+    <a href="register.html" class="btn">دخول المنصة والانضمام</a>
+</div>
+
 </body>
 </html>
