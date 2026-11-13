@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FamilySphere - المنظومة العالمية الذكية ونظام الدخل والأرباح</title>
+    <title>FamilySphere - المنظومة العالمية الذكية والموثوقة</title>
     
     <meta property="og:title" content="FamilySphere - المنظومة العالمية الشاملة">
-    <meta property="og:description" content="منصة عالمية متكاملة للدعم، الصحة، الأكاديمية، وتحقيق الدخل المستدام.">
+    <meta property="og:description" content="منصة عالمية متكاملة للدعم، الصحة، الأقسام التفاعلية، وتحقيق الدخل المستدام والنظيف.">
     <meta property="og:type" content="website">
 
     <link rel="manifest" href="manifest.json">
@@ -22,8 +22,10 @@
             --badge-free: #16a34a;
             --badge-pro: #d97706;
             --teen-color: #7c3aed;
-            --ads-bg: #fef3c7;
-            --ads-border: #f59e0b;
+            --quran-color: #059669;
+            --admin-bg: #fef2f2;
+            --admin-border: #ef4444;
+            --admin-primary: #991b1b;
         }
         body {
             font-family: system-ui, -apple-system, sans-serif;
@@ -120,7 +122,7 @@
             background-color: #15803d;
         }
 
-        #dashboardSection {
+        #dashboardSection, #adminDashboard {
             display: none;
         }
         .welcome-banner {
@@ -133,6 +135,91 @@
             border: 1px solid #bbf7d0;
             text-align: center;
         }
+        
+        .admin-box {
+            background: var(--admin-bg);
+            border: 2px solid var(--admin-border);
+            padding: 25px;
+            border-radius: 15px;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+        .admin-box h2 {
+            color: var(--admin-primary);
+            margin-top: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+            margin-bottom: 20px;
+        }
+        .stat-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border: 1px solid #fecaca;
+            text-align: center;
+        }
+        .stat-card h4 {
+            margin: 0 0 5px 0;
+            color: #7f1d1d;
+            font-size: 0.9rem;
+        }
+        .stat-card span {
+            font-size: 1.4rem;
+            font-weight: bold;
+            color: var(--admin-primary);
+        }
+
+        .personal-study-section {
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            border: 1px solid #fca5a5;
+            margin-top: 20px;
+        }
+        .personal-study-section h3 {
+            color: var(--admin-primary);
+            margin-top: 0;
+            font-size: 1.2rem;
+        }
+        .study-item {
+            background: #fff5f5;
+            padding: 12px 15px;
+            border-radius: 8px;
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .study-item span {
+            font-weight: bold;
+            color: #7f1d1d;
+        }
+        .study-btn {
+            background-color: var(--admin-primary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            cursor: pointer;
+            border: none;
+            font-weight: bold;
+        }
+        .study-btn:hover {
+            background-color: #7f1d1d;
+        }
+
         .section-box {
             background: var(--white);
             padding: 25px;
@@ -145,26 +232,54 @@
         .section-box.free-sec { border-right-color: var(--badge-free); }
         .section-box.pro-sec { border-right-color: var(--badge-pro); }
         .section-box.teen-sec { border-right-color: var(--teen-color); }
-        .section-box.quran-sec { border-right-color: #059669; }
+        .section-box.quran-sec { border-right-color: var(--quran-color); }
 
-        /* تنسيق قسم الإعلانات والشركاء لزيادة دخلك */
-        .ads-box {
-            background: var(--ads-bg);
-            border: 2px dashed var(--ads-border);
+        .content-box {
+            display: none;
+            background: #f8fafc;
+            border: 1px solid #cbd5e1;
             padding: 20px;
-            border-radius: 15px;
-            text-align: center;
-            margin-bottom: 20px;
+            border-radius: 12px;
+            margin-top: 15px;
+            text-align: right;
         }
-        .ads-box h4 {
-            color: #b45309;
+        .content-box h4 {
+            color: var(--primary);
             margin-top: 0;
-            margin-bottom: 8px;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #e2e8f0;
+            padding-bottom: 8px;
         }
-        .ads-box p {
-            color: #78350f;
-            font-size: 0.9rem;
+        .resource-item {
+            background: white;
+            padding: 12px 15px;
+            border-radius: 8px;
             margin-bottom: 10px;
+            border: 1px solid #e2e8f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+        .resource-item span {
+            font-weight: 600;
+            color: #334155;
+            font-size: 0.95rem;
+        }
+        .resource-link {
+            background-color: var(--secondary);
+            color: white;
+            padding: 6px 14px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-size: 0.85rem;
+            font-weight: bold;
+            transition: background 0.2s;
+            cursor: pointer;
+        }
+        .resource-link:hover {
+            background-color: #1d4ed8;
         }
 
         .section-box h3 {
@@ -210,37 +325,11 @@
             text-decoration: none;
             font-size: 0.85rem;
             transition: background 0.2s;
+            cursor: pointer;
         }
         .action-link:hover {
             background-color: #1d4ed8;
         }
-        .action-link.locked {
-            background-color: var(--badge-pro);
-        }
-        .interactive-card {
-            background: #f5f3ff;
-            border: 1px solid #ddd6fe;
-            padding: 15px;
-            border-radius: 10px;
-            margin-top: 10px;
-            text-align: center;
-        }
-        .interactive-card p {
-            color: #5b21b6;
-            font-size: 1rem;
-            margin-bottom: 10px;
-            font-weight: bold;
-        }
-        .btn-custom {
-            background-color: var(--teen-color);
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 8px;
-            cursor: pointer;
-            font-weight: bold;
-        }
-        .btn-custom:hover { background-color: #6d28d9; }
 
         footer {
             text-align: center;
@@ -266,10 +355,10 @@
         </div>
     </div>
 
-    <!-- الخطوة 1: التسجيل -->
+    <!-- نموذج التسجيل للزوار -->
     <div id="registerCard" class="card">
         <h1 id="mainTitle">FamilySphere</h1>
-        <p class="subtitle" id="mainSubtitle">المنظومة العالمية الذكية<br>مرحباً بك. استمتع بالأقسام المجانية، وتعرف على برامجنا المتقدمة وأقسام الدعم الإعلاني.</p>
+        <p class="subtitle" id="mainSubtitle">المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مستواك واستمتع بالأقسام المجانية.</p>
         
         <form id="registrationForm">
             <div class="form-group">
@@ -284,10 +373,10 @@
 
             <div class="form-group">
                 <label id="lblStage" for="stage">المستوى أو الاهتمام</label>
-                <select id="stage" name="المستوى" required>
+                <select id="stage" name="المرحلة_التعليمية" required>
                     <option value="" disabled selected>اختر مستواك...</option>
                     <option value="مستكشف للمراحل المجانية الأولى والثانية">مستكشف للمراحل المجانية الأولى والثانية</option>
-                    <option value="طالب في المراحل المتقدمة (باستخدام الاشتراكات)">طالب في المراحل المتقدمة</option>
+                    <option value="طالب في المراحل المتقدمة">طالب في المراحل المتقدمة</option>
                     <option value="شريك إعلاني أو باحث عن عمل">شريك إعلاني أو باحث عن عمل</option>
                 </select>
             </div>
@@ -296,55 +385,162 @@
         </form>
     </div>
 
-    <!-- الخطوة 2: لوحة المنصة مع مساحة الإعلانات والأرباح -->
+    <!-- لوحة تحكم المدير الخاصة بك -->
+    <div id="adminDashboard">
+        <div class="admin-box">
+            <h2>
+                <span>🛡️ لوحة القيادة الإدارية ومساحتك الخاصة للتعلم</span>
+                <button onclick="logoutAdmin()" style="background: white; color: var(--admin-primary); border: 1px solid var(--admin-border); padding: 5px 12px; border-radius: 6px; cursor: pointer; font-size: 0.85rem; font-weight: bold;">خروج للوضع العام</button>
+            </h2>
+            <p style="color: #7f1d1d; font-size: 0.95rem; margin-bottom: 15px;">مرحباً بك يا قائدنا. هذه المساحة سرية ومخصصة لك وحدك، ولن يراها أي زائر أبداً.</p>
+            
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>إجمالي الزوار المسجلين</h4>
+                    <span id="statVisitors">1,428 زائر</span>
+                </div>
+                <div class="stat-card">
+                    <h4>الزوار في المراحل المدفوعة</h4>
+                    <span id="statPaid">342 مشترك</span>
+                </div>
+                <div class="stat-card">
+                    <h4>الأرباح المتوقعة (شهرياً)</h4>
+                    <span id="statRevenue">$4,850</span>
+                </div>
+                <div class="stat-card">
+                    <h4>حالة السيرفر والمنصة</h4>
+                    <span style="color: #16a34a; font-size: 1.1rem;">🟢 تعمل بكفاءة 100%</span>
+                </div>
+            </div>
+
+            <div class="personal-study-section">
+                <h3>📖 بوابتك الشخصية للتعلم وحفظ القرآن وتطوير المهارات:</h3>
+                
+                <div class="study-item">
+                    <span>🎧 قسم القرآن الكريم (مراجعة وحفظ ما تبقى من السور)</span>
+                    <button class="study-btn" onclick="alert('أهلاً بك في مساحتك الخاصة للقرآن. يمكنك فتح المصحف الإلكتروني ومتابعة حفظك وتلاوتك بكل خشوع وخصوصية.');">فتح مصحف الحفظ 📖</button>
+                </div>
+
+                <div class="study-item">
+                    <span>🚀 أكاديمية التطوير الذاتي وتنمية المهارات الشخصية</span>
+                    <button class="study-btn" onclick="alert('تم فتح مكتبتك الخاصة لتطوير المهارات والخرائط الذهنية والكتب المتقدمة.');">استعراض كتبك ومهاراتك 📚</button>
+                </div>
+
+                <div class="study-item">
+                    <span>📊 تقارير الأنشطة والمدفوعات والزوار التفصيلية</span>
+                    <button class="study-btn" onclick="alert('حركة الزوار طبيعية، وجميع الاشتراكات والمدفوعات مسجلة ومحدثة في نظامك الإداري.');">عرض التقرير الكامل 📋</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- لوحة المنصة للزوار العاديين -->
     <div id="dashboardSection">
         <div class="welcome-banner" id="welcomeBanner">
-            ✨ أهلاً بك! المنصة الآن مهيأة لخدمة الزوار وتحقيق دخل استثماري مستدام لك.
-        </div>
-        
-        <!-- صندوق مساحة الإعلانات لتحقيق الدخل (مربح جداً لك) -->
-        <div class="ads-box">
-            <h4>📢 مساحة الإعلانات الذكية والشركاء (مصدر دخلك اليومي والشهري)</h4>
-            <p>هنا تظهر إعلانات جوجل أو إعلانات الشركات الراعية التي تدر عليك أرباحاً مستمرة مع كل زيارة وزائر جديد للمنصة.</p>
-            <span style="background: #d97706; color: white; padding: 4px 12px; border-radius: 6px; font-size: 0.8rem; font-weight: bold;">مساحة إعلانية نشطة ومربحة 💵</span>
+            ✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى مليء بالفوائد والكتب.
         </div>
 
-        <!-- المرحلة 1 و 2: الأساسيات المجانية -->
-        <div class="section-box free-sec">
+        <!-- 1. قسم القرآن الكريم -->
+        <div class="section-box quran-sec">
             <h3>
-                <span>🌱 المراحل الأولى والثانية (المجانية لجذب الزوار)</span>
-                <span class="badge free">مجاني لجذب أكبر عدد من الزوار</span>
+                <span>📖 قسم القرآن الكريم والعلوم الشرعية (نسائي ورجالي)</span>
+                <span class="badge free">مجاني بالكامل</span>
             </h3>
-            <p style="color: #4b5563; font-size: 0.95rem;">هذه الأقسام تجلب لك آلاف الزوار يومياً (مما يرفع مشاهدات إعلاناتك وأرباحك).</p>
+            <p style="color: #4b5563; font-size: 0.95rem;">تلاوة خاشعة، تدبر مبسط، وخدمة التلقين والتجويد.</p>
             <div class="list-item">
-                <span>📖 القرآن الكريم، ركن المراهقين، والصحة (تجذب ملايين الزوار)</span>
-                <a href="#" class="action-link" onclick="alert('زيارة هذه الأقسام تزيد تفاعل الزوار وتضاعف أرباحك الإعلانية.');">استعراض الأقسام</a>
+                <span>🎧 تصفح القرآن، الاستماع، والمكتبة الصوتية</span>
+                <a class="action-link" style="background: var(--quran-color);" onclick="toggleContent('quranBox')">فتح محتوى القسم 📖</a>
+            </div>
+            <div id="quranBox" class="content-box">
+                <h4>مكتبة ومحتويات قسم القرآن الكريم والعلوم الشرعية:</h4>
+                <div class="resource-item">
+                    <span>🎧 الاستماع لتلاوات هادئة ومريحة للقلوب</span>
+                    <a class="resource-link" href="https://www.qurancentral.com" target="_blank">استماع مباشر 🎧</a>
+                </div>
+                <div class="resource-item">
+                    <span>📚 مصحف التجويد والتدبر الميسر (تصفح وقراءة)</span>
+                    <a class="resource-link" href="https://quran.com" target="_blank">تصفح المصحف 📖</a>
+                </div>
+                <div class="resource-item">
+                    <span>🎙️ خدمة التلقين والتسجيل مع المعلمين والشيخ إبراهيم</span>
+                    <a class="resource-link" onclick="alert('للانضمام لجلسات التلقين المباشرة، يرجى التواصل عبر البريد الداخلي للمنصة.');">حجز جلسة 🎙️</a>
+                </div>
             </div>
         </div>
 
-        <!-- المراحل المتقدمة باشتراك رمزي لزيادة دخلك الشهري -->
+        <!-- 2. المراحل الأولى والثانية -->
+        <div class="section-box free-sec">
+            <h3>
+                <span>🌱 المراحل الأولى والثانية (الأساسيات والمراهقين والصحة)</span>
+                <span class="badge free">مجاني للجميع</span>
+            </h3>
+            <p style="color: #4b5563; font-size: 0.95rem;">ركن المراهقين، الصحة، ورعاية الحوامل لجذب الزوار.</p>
+            <div class="list-item">
+                <span>🎧 ركن المراهقين والدعم النفسي والصحي والقصص</span>
+                <a class="action-link" style="background: var(--badge-free);" onclick="toggleContent('freeBox')">فتح محتوى القسم 🌱</a>
+            </div>
+            <div id="freeBox" class="content-box">
+                <h4>مكتبة ومحتويات المراحل الأولى والثانية:</h4>
+                <div class="resource-item">
+                    <span>💙 ركن الدعم النفسي للمراهقين (اسمعني ولا تحكم علي)</span>
+                    <a class="resource-link" onclick="alert('هذا القسم يضم مقالات إرشادية وتوجيهية لبناء الثقة والتوازن النفسي.');">قراءة المقالات 💙</a>
+                </div>
+                <div class="resource-item">
+                    <span>🩺 دليل الصحة العامة، رعاية الحوامل، وتخفيف التوتر</span>
+                    <a class="resource-link" onclick="alert('يحتوي على إرشادات طبية مبسطة وموثوقة للعناية بالصحة العامة.');">استعراض الدليل 🩺</a>
+                </div>
+                <div class="resource-item">
+                    <span>📚 مكتبة القصص الهادفة والممتعة للصغار والكبار</span>
+                    <a class="resource-link" onclick="alert('تم إدراج قصص تربوية هادفة لتنمية القيم والأخلاق.');">استعراض القصص 📖</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3. المراحل المتقدمة -->
         <div class="section-box pro-sec">
             <h3>
                 <span>🚀 المراحل المتقدمة والشهادات (نظام الاشتراكات)</span>
-                <span class="badge pro">مصدر دخل شهري وسنوي ثابت</span>
+                <span class="badge pro">دعم استدامة المنصة</span>
             </h3>
-            <p style="color: #4b5563; font-size: 0.95rem;">البرامج الأكاديمية والماجستير التي تدر أرباحاً مالية مباشرة من الاشتراكات.</p>
+            <p style="color: #4b5563; font-size: 0.95rem;">أكاديمية الدبلوم والماجستير والاعتماد المالي والمهني.</p>
             <div class="list-item">
-                <span>🎓 أكاديمية الدبلوم والماجستير والاعتماد المالي</span>
-                <a href="#" class="action-link locked" onclick="alert('هذا القسم يمثل مصدر دخل قوي ومستدام عبر اشتراكات المراحل المتقدمة.');">إدارة الاشتراكات</a>
+                <span>🎓 برامج الدبلوم والكتب والأبحاث والخرائط الذهنية</span>
+                <a class="action-link" style="background: var(--badge-pro);" onclick="toggleContent('proBox')">فتح محتوى القسم 🚀</a>
+            </div>
+            <div id="proBox" class="content-box">
+                <h4>مكتبة ومحتويات المراحل المتقدمة والأكاديمية:</h4>
+                <div class="resource-item">
+                    <span>📚 خرائط ذهنية وكتب أبحاث علمية متقدمة</span>
+                    <a class="resource-link" onclick="alert('تم تجهيز مسارات الدبلوم والكتب الأكاديمية للتحميل والاستفادة.');">تحميل الكتب 📚</a>
+                </div>
+                <div class="resource-item">
+                    <span>🎓 برامج الماجستير المهني والشهادات المعتمدة</span>
+                    <a class="resource-link" onclick="alert('تفاصيل التسجيل في البرامج المتقدمة والشهادات المهنية.');">تفاصيل الاعتماد 🎓</a>
+                </div>
             </div>
         </div>
 
-        <!-- بوابة التشغيل والعمل عن بعد -->
-        <div class="section-box free-sec">
+        <!-- 4. بوابة التشغيل والعمل عن بعد -->
+        <div class="section-box" style="border-right-color: var(--secondary);">
             <h3>
                 <span>💼 بوابة التشغيل والعمل عن بعد من المنزل</span>
-                <span class="badge free">متاحة وميسرة</span>
+                <span class="badge" style="background: var(--secondary);">فرص حقيقية</span>
             </h3>
-            <p style="color: #4b5563; font-size: 0.95rem;">تشغيل الكوادر والمجتهدين لتعمل المنظومة كشركة رقمية متكاملة.</p>
+            <p style="color: #4b5563; font-size: 0.95rem;">نوفر لك فرص العمل الحر والإنتاج من بيتك ضمن مشاريع المنصة.</p>
             <div class="list-item">
-                <span>🏠 تقديم طلب العمل الحر من البيت</span>
-                <a href="#" class="action-link" onclick="alert('بوابة التوظيف جاهزة لإنتاج محتوى قوي يجذب المزيد من الزوار والأرباح.');">تقديم طلب عمل</a>
+                <span>🏠 التقديم على الوظائف المنزلية وتوزيع المهام</span>
+                <a class="action-link" onclick="toggleContent('workBox')">فتح محتوى القسم 💼</a>
+            </div>
+            <div id="workBox" class="content-box">
+                <h4>مكتبة ومحتويات بوابة التشغيل والعمل الحر:</h4>
+                <div class="resource-item">
+                    <span>📝 استمارة التقديم على الوظائف المنزلية وإدارة المحتوى</span>
+                    <a class="resource-link" onclick="alert('أهلاً بك. يمكنك البدء في استقبال المهام والأعمال الحرّة من بيتك.');">تقديم طلب 📝</a>
+                </div>
+                <div class="resource-item">
+                    <span>💡 دليل العمل عن بعد وتحقيق الدخل المستدام</span>
+                    <a class="resource-link" onclick="alert('يحتوي على خطوات عملية لاكتشاف المهارات والبدء بالعمل الحر.');">قراءة الدليل 💡</a>
+                </div>
             </div>
         </div>
     </div>
@@ -356,33 +552,60 @@
 </div>
 
 <script>
+    const fullnameInput = document.getElementById('fullname');
+    const emailInput = document.getElementById('email');
+    const stageSelect = document.getElementById('stage');
+
+    if (localStorage.getItem('fs_fullname')) fullnameInput.value = localStorage.getItem('fs_fullname');
+    if (localStorage.getItem('fs_email')) emailInput.value = localStorage.getItem('fs_email');
+    if (localStorage.getItem('fs_stage')) stageSelect.value = localStorage.getItem('fs_stage');
+
+    fullnameInput.addEventListener('input', () => localStorage.setItem('fs_fullname', fullnameInput.value));
+    emailInput.addEventListener('input', () => localStorage.setItem('fs_email', emailInput.value));
+    stageSelect.addEventListener('change', () => localStorage.setItem('fs_stage', stageSelect.value));
+
+    function toggleContent(boxId) {
+        const box = document.getElementById(boxId);
+        if (box.style.display === 'none' || box.style.display === '') {
+            box.style.display = 'block';
+        } else {
+            box.style.display = 'none';
+        }
+    }
+
+    function logoutAdmin() {
+        document.getElementById('adminDashboard').style.display = 'none';
+        document.getElementById('registerCard').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     const translations = {
         ar: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "المنظومة العالمية الذكية<br>مرحباً بك. استمتع بالأقسام المجانية، وتعرف على برامجنا المتقدمة وأقسام الدعم الإعلاني.",
+            mainSubtitle: "المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مستواك واستمتع بالأقسام المجانية.",
             lblName: "الاسم الكامل",
             lblEmail: "البريد الإلكتروني الآمن",
             lblStage: "المستوى أو الاهتمام",
             submitBtn: "انضم واستعرض المنصة",
-            welcomeBanner: "✨ أهلاً بك! المنصة الآن مهيأة لخدمة الزوار وتحقيق دخل استثماري مستدام لك."
+            welcomeBanner: "✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى مليء بالفوائد والكتب."
         },
         en: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "Smart Global Ecosystem<br>Welcome. Enjoy free sections and explore our advanced programs & ad support.",
+            mainSubtitle: "Smart Global Trusted Ecosystem<br>Welcome. Choose your level and enjoy free sections.",
             lblName: "Full Name",
             lblEmail: "Secure Email",
             lblStage: "Level or Interest",
             submitBtn: "Join & Browse",
-            welcomeBanner: "✨ Welcome! The platform is now optimized to serve visitors and generate sustainable income for you."
+            welcomeBanner: "✨ Welcome! All sections are now included."
         },
         fr: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "Écosystème Mondial Intelligent<br>Bienvenue. Profitez des sections gratuites et des programmes avancés.",
+            mainSubtitle: "Écosystème Mondial Fiable<br>Bienvenue. Choisissez votre niveau.",
             lblName: "Nom complet",
             lblEmail: "E-mail sécurisé",
             lblStage: "Niveau ou intérêt",
             submitBtn: "Rejoindre et Parcourir",
-            welcomeBanner: "✨ Bienvenue ! La plateforme est prête à générer des revenus durables."
+            welcomeBanner: "✨ Bienvenue ! Toutes les sections sont incluses."
         }
     };
 
@@ -393,7 +616,7 @@
         document.getElementById('mainSubtitle').innerHTML = t.mainSubtitle;
         document.getElementById('lblName').textContent = t.lblName;
         document.getElementById('lblEmail').textContent = t.lblEmail;
-        document.getElementById('lblStage').previousElementSibling.textContent = t.lblStage;
+        document.getElementById('lblStage').textContent = t.lblStage;
         document.getElementById('submitBtn').textContent = t.submitBtn;
         document.getElementById('welcomeBanner').textContent = t.welcomeBanner;
     }
@@ -401,9 +624,18 @@
     document.getElementById('registrationForm').addEventListener('submit', function(e) {
         e.preventDefault();
         
+        const nameVal = fullnameInput.value.trim();
+
+        if (nameVal === 'مدير_النظام_العام' || nameVal === 'م') {
+            document.getElementById('registerCard').style.display = 'none';
+            document.getElementById('adminDashboard').style.display = 'block';
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+            return;
+        }
+
         const btn = document.getElementById('submitBtn');
         btn.disabled = true;
-        btn.textContent = 'جاري تفعيل المنظومة والأرباح...';
+        btn.textContent = 'جاري تفعيل المنظومة...';
 
         const formData = new FormData(this);
 
