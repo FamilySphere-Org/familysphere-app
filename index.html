@@ -6,7 +6,7 @@
     <title>FamilySphere - المنظومة العالمية الذكية والموثوقة</title>
     
     <meta property="og:title" content="FamilySphere - المنظومة العالمية الشاملة">
-    <meta property="og:description" content="منصة عالمية متكاملة للدعم، الصحة، الأقسام التفاعلية، وتحقيق الدخل المستدام والنظيف.">
+    <meta property="og:description" content="منصة عالمية متكاملة للدعم، الصحة، معلمين الذكاء الاصطناعي الصوتي، والأقسام التفاعلية.">
     <meta property="og:type" content="website">
 
     <link rel="manifest" href="manifest.json">
@@ -122,7 +122,7 @@
             background-color: #15803d;
         }
 
-        #dashboardSection, #adminDashboard {
+        #dashboardSection, #adminDashboard, .sub-page {
             display: none;
         }
         .welcome-banner {
@@ -282,6 +282,26 @@
             background-color: #1d4ed8;
         }
 
+        .article-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #e2e8f0;
+            text-align: right;
+        }
+        .article-card h5 {
+            color: var(--primary);
+            margin: 0 0 8px 0;
+            font-size: 1.1rem;
+        }
+        .article-card p {
+            color: #4b5563;
+            font-size: 0.95rem;
+            line-height: 1.6;
+            margin: 0 0 10px 0;
+        }
+
         .video-container {
             position: relative;
             width: 100%;
@@ -374,10 +394,10 @@
         </div>
     </div>
 
-    <!-- نموذج التسجيل للزوار -->
+    <!-- نموذج التسجيل للزوار (المحدث) -->
     <div id="registerCard" class="card">
         <h1 id="mainTitle">FamilySphere</h1>
-        <p class="subtitle" id="mainSubtitle">المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مرحلتك الدراسية واستمتع بالأقسام المجانية والتفاعلية.</p>
+        <p class="subtitle" id="mainSubtitle">المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مستواك أو خلفيتك واستمتع بالأقسام المجانية والتفاعلية.</p>
         
         <form id="registrationForm">
             <div class="form-group">
@@ -391,9 +411,11 @@
             </div>
 
             <div class="form-group">
-                <label id="lblStage" for="stage">المرحلة الدراسية أو التعليمية</label>
+                <label id="lblStage" for="stage">المستوى، المرحلة أو الحالة</label>
                 <select id="stage" name="المرحلة_التعليمية" required>
-                    <option value="" disabled selected>اختر مرحلتك الدراسية...</option>
+                    <option value="" disabled selected>اختر مستواك أو حالتك...</option>
+                    <option value="ربة بيت">ربة بيت</option>
+                    <option value="غير دارسين">غير دارسين</option>
                     <option value="المرحلة الابتدائية">المرحلة الابتدائية</option>
                     <option value="المرحلة الإعدادية أو المتوسطة">المرحلة الإعدادية أو المتوسطة</option>
                     <option value="المرحلة الثانوية">المرحلة الثانوية</option>
@@ -455,32 +477,32 @@
         </div>
     </div>
 
-    <!-- لوحة المنصة للزوار العاديين -->
+    <!-- لوحة المنصة الرئيسية للزوار العاديين -->
     <div id="dashboardSection">
         <div class="welcome-banner" id="welcomeBanner">
-            ✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى كامل ومفيد.
+            ✨ أهلاً بك! تم تحديث المنظومة لتشمل معلمين الذكاء الاصطناعي الصوتي وحلقات القرآن وأقسام المقالات المستقلة.
         </div>
 
-        <!-- 1. قسم القرآن الكريم والتجويد -->
+        <!-- 1. قسم القرآن الكريم والتجويد (نساء ورجال + معلمين الذكاء الاصطناعي الصوتي البشري) -->
         <div class="section-box quran-sec">
             <h3>
-                <span>📖 قسم القرآن الكريم والتجويد (نساء ورجال)</span>
+                <span>📖 قسم القرآن الكريم والتجويد (حلقات مباشرة ومعلمين بالذكاء الاصطناعي بصوت بشري)</span>
                 <span class="badge free">مجاني بالكامل</span>
             </h3>
-            <p style="color: #4b5563; font-size: 0.95rem;">تلاوة خاشعة، تدبر مبسط، وحلقات تلقين وإشراف تخصصي.</p>
+            <p style="color: #4b5563; font-size: 0.95rem;">تلاوة خاشعة، تدبر مبسط، جلسات تسميع أونلاين، ومعلمين ومعلمات افتراضيين بصوت بشري نقي.</p>
             <div class="list-item">
-                <span>🎧 استعراض الحلقات ومصادر التلاوة والتجويد</span>
+                <span>🎧 تصفح القرآن، الحلقات الصوتية، ومعلمين الذكاء الاصطناعي</span>
                 <a class="action-link" style="background: var(--quran-color);" onclick="toggleContent('quranBox')">فتح محتوى القسم 📖</a>
             </div>
             <div id="quranBox" class="content-box">
-                <h4>مكتبة ومحتويات قسم القرآن الكريم:</h4>
+                <h4>محتويات وحلقات قسم القرآن الكريم:</h4>
                 <div class="resource-item">
-                    <span>🧕 قسم النساء: حلقات ومراجعة الحفظ مع نخبة من معلمات القرآن الكريم</span>
-                    <a class="resource-link" style="background: var(--quran-color);" onclick="alert('أهلاً بكِ أختنا الكريمة. يمكنكِ التنسيق لحلقات الحفظ والتلاوة مع المعلمات المختصات بكل خصوصية.');">التسجيل لحلقات النساء 🧕</a>
+                    <span>🧕 قسم النساء (معلمة قرآن بشرية + معلمة ذكاء اصطناعي صوتي): حلقات أونلاين، تسميع صوتي، ودردشة تفاعلية.</span>
+                    <a class="resource-link" style="background: var(--quran-color);" onclick="alert('أهلاً بكِ أختنا الكريمة. تم تفعيل نظام المعلمة الافتراضية (بصوت بشري دافئ وناعم) للتسميع الفوري والرد على استفسارات الحفظ والتجويد على مدار الساعة.');">بدء الجلسة النسائية 🧕</a>
                 </div>
                 <div class="resource-item">
-                    <span>👨‍💼 قسم الرجال: حلقات التلقين والتجويد مع نخبة من معلمي القرآن</span>
-                    <a class="resource-link" style="background: var(--primary);" onclick="alert('أهلاً بك أخي الكريم. تم فتح نافذة الالتحاق بحلقات التلاوة والحفظ مع المعلمين المعتمدين.');">التسجيل لحلقات الرجال 👨‍💼</a>
+                    <span>👨‍💼 قسم الرجال (معلم قرآن بشري + معلم ذكاء اصطناعي صوتي): محاضرات، حلقات أونلاين، وتسميع صوتي للآيات.</span>
+                    <a class="resource-link" style="background: var(--primary);" onclick="alert('أهلاً بك أخي الكريم. تم تفعيل نظام المعلم الافتراضي (بصوت بشري نقي وقوي) لإدارة حلقات التلاوة، التسميع الصوتي، والإجابة عن الأسئلة الشرعية.');">بدء الجلسة الرجالية 👨‍💼</a>
                 </div>
                 <div class="resource-item">
                     <span>📚 مصحف التجويد والتدبر الميسر (تصفح وقراءة)</span>
@@ -489,74 +511,47 @@
             </div>
         </div>
 
-        <!-- 2. قسم الفيديوهات التعليمية -->
-        <div class="section-box teen-sec">
+        <!-- 2. ركن الدعم النفسي (يفتح كصفحة مستقلة ومقالات للقراءة) -->
+        <div class="section-box" style="border-right-color: var(--teen-color);">
             <h3>
-                <span>🎬 قسم الفيديوهات التعليمية والمرئيات المتنوعة</span>
-                <span class="badge" style="background: var(--teen-color);">محتوى مرئي</span>
+                <span>💙 ركن الدعم النفسي وتطوير الذات</span>
+                <span class="badge" style="background: var(--teen-color);">مقالات إرشادية</span>
             </h3>
-            <p style="color: #4b5563; font-size: 0.95rem;">مكتبة فيديوهات تعليمية، شروحات مرئية، وتلاوات قرآنية مختارة للمشاهدة المباشرة.</p>
+            <p style="color: #4b5563; font-size: 0.95rem;">مكتبة مقالات إرشادية متكاملة تفتح في صفحة مستقلة لبناء الثقة والتوازن النفسي.</p>
             <div class="list-item">
-                <span>▶️ استعراض ومشاهدة الفيديوهات التعليمية المباشرة</span>
-                <a class="action-link" style="background: var(--teen-color);" onclick="toggleContent('videoBox')">فتح نافذة الفيديوهات 🎬</a>
-            </div>
-            <div id="videoBox" class="content-box">
-                <h4>المكتبة المرئية والفيديوهات التعليمية:</h4>
-                <p style="font-weight: bold; color: var(--primary); margin-top: 10px;">1. فيديو تلاوة وخشوع (تلاوة هادئة):</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" allowfullscreen></iframe>
-                </div>
-                <p style="font-weight: bold; color: var(--primary); margin-top: 20px;">2. فيديو تطوير الذات والمهارات الشخصية:</p>
-                <div class="video-container">
-                    <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
-                </div>
+                <span>📖 قراءة المقالات الإرشادية والنفسية المتكاملة</span>
+                <a class="action-link" style="background: var(--teen-color);" onclick="openSubPage('psychologyPage')">فتح صفحة المقالات النفسية 💙</a>
             </div>
         </div>
 
-        <!-- 3. المراحل الأولى والثانية -->
+        <!-- 3. دليل الصحة العامة (يفتح كصفحة مستقلة ومقالات للقراءة) -->
         <div class="section-box free-sec">
             <h3>
-                <span>🌱 المراحل الأولى والثانية (الأساسيات والمراهقين والصحة)</span>
-                <span class="badge free">مجاني للجميع</span>
+                <span>🩺 دليل الصحة العامة ورعاية الأسرة</span>
+                <span class="badge free">مقالات طبية موثوقة</span>
             </h3>
-            <p style="color: #4b5563; font-size: 0.95rem;">ركن المراهقين، الصحة، ورعاية الحوامل لجذب الزوار.</p>
+            <p style="color: #4b5563; font-size: 0.95rem;">دليل طبي مبسط ومقالات متكاملة لرعاية الحوامل، الصحة العامة، وتخفيف التوتر.</p>
             <div class="list-item">
-                <span>🎧 ركن المراهقين والدعم النفسي والصحي والقصص</span>
-                <a class="action-link" style="background: var(--badge-free);" onclick="toggleContent('freeBox')">فتح محتوى القسم 🌱</a>
-            </div>
-            <div id="freeBox" class="content-box">
-                <h4>مكتبة ومحتويات المراحل الأولى والثانية:</h4>
-                <div class="resource-item">
-                    <span>💙 ركن الدعم النفسي للمراهقين (اسمعني ولا تحكم علي)</span>
-                    <a class="resource-link" onclick="alert('هذا القسم يضم مقالات إرشادية وتوجيهية لبناء الثقة والتوازن النفسي.');">قراءة المقالات 💙</a>
-                </div>
-                <div class="resource-item">
-                    <span>🩺 دليل الصحة العامة، رعاية الحوامل، وتخفيف التوتر</span>
-                    <a class="resource-link" onclick="alert('يحتوي على إرشادات طبية مبسطة وموثوقة للعناية بالصحة العامة.');">استعراض الدليل 🩺</a>
-                </div>
+                <span>🩺 قراءة مقالات وإرشادات الصحة العامة والأسرة</span>
+                <a class="action-link" style="background: var(--badge-free);" onclick="openSubPage('healthPage')">فتح صفحة دليل الصحة العامة 🩺</a>
             </div>
         </div>
 
-        <!-- 4. المراحل المتقدمة -->
+        <!-- 4. قسم الفيديوهات التعليمية والمرئيات -->
         <div class="section-box pro-sec">
             <h3>
-                <span>🚀 المراحل المتقدمة والشهادات (نظام الاشتراكات)</span>
-                <span class="badge pro">دعم استدامة المنصة</span>
+                <span>🎬 قسم الفيديوهات التعليمية والمحاضرات</span>
+                <span class="badge pro">مرئيات متنوعة</span>
             </h3>
-            <p style="color: #4b5563; font-size: 0.95rem;">أكاديمية الدبلوم والماجستير والاعتماد المالي والمهني.</p>
+            <p style="color: #4b5563; font-size: 0.95rem;">مكتبة فيديوهات تعليمية ومحاضرات مباشرة للمشاهدة.</p>
             <div class="list-item">
-                <span>🎓 برامج الدبلوم والكتب والأبحاث والخرائط الذهنية</span>
-                <a class="action-link" style="background: var(--badge-pro);" onclick="toggleContent('proBox')">فتح محتوى القسم 🚀</a>
+                <span>▶️ استعراض ومشاهدة الفيديوهات التعليمية</span>
+                <a class="action-link" style="background: var(--badge-pro);" onclick="toggleContent('videoBox')">فتح نافذة الفيديوهات 🎬</a>
             </div>
-            <div id="proBox" class="content-box">
-                <h4>مكتبة ومحتويات المراحل المتقدمة والأكاديمية:</h4>
-                <div class="resource-item">
-                    <span>📚 خرائط ذهنية وكتب أبحاث علمية متقدمة للتحميل</span>
-                    <a class="resource-link" onclick="alert('تم تجهيز مسارات الدبلوم والكتب الأكاديمية للتحميل والاستفادة.');">تحميل الكتب 📚</a>
-                </div>
-                <div class="resource-item">
-                    <span>🎓 برامج الماجستير المهني والشهادات المعتمدة</span>
-                    <a class="resource-link" onclick="alert('تفاصيل التسجيل في البرامج المتقدمة والشهادات المهنية.');">تفاصيل الاعتماد 🎓</a>
+            <div id="videoBox" class="content-box">
+                <h4>المكتبة المرئية:</h4>
+                <div class="video-container">
+                    <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" allowfullscreen></iframe>
                 </div>
             </div>
         </div>
@@ -573,17 +568,59 @@
                 <a class="action-link" onclick="toggleContent('workBox')">فتح محتوى القسم 💼</a>
             </div>
             <div id="workBox" class="content-box">
-                <h4>مكتبة ومحتويات بوابة التشغيل والعمل الحر:</h4>
+                <h4>محتويات بوابة التشغيل والعمل الحر:</h4>
                 <div class="resource-item">
                     <span>📝 استمارة التقديم على الوظائف المنزلية وإدارة المحتوى</span>
                     <a class="resource-link" onclick="alert('أهلاً بك. يمكنك البدء في استقبال المهام والأعمال الحرّة من بيتك.');">تقديم طلب 📝</a>
                 </div>
-                <div class="resource-item">
-                    <span>💡 دليل العمل عن بعد وتحقيق الدخل المستدام</span>
-                    <a class="resource-link" onclick="alert('يحتوي على خطوات عملية لاكتشاف المهارات والبدء بالعمل الحر.');">قراءة الدليل 💡</a>
-                </div>
             </div>
         </div>
+    </div>
+
+    <!-- ================= صفحة مقالات الدعم النفسي المستقلة ================= -->
+    <div id="psychologyPage" class="card sub-page">
+        <h2 style="color: var(--primary); margin-top:0;">💙 ركن الدعم النفسي وتطوير الذات (مقالات للقراءة)</h2>
+        <p style="color: #4b5563; margin-bottom: 20px;">مجموعة من المقالات الإرشادية والموثوقة لدعم التوازن النفسي وبناء الثقة الشخصية.</p>
+        
+        <div class="article-card">
+            <h5>1. فن التعامل مع الضغوط اليومية وتخفيف التوتر</h5>
+            <p>الضغط النفسي جزء من الحياة المعاصرة، ولكن تعلم تقنيات التنفس العميق، وتنظيم الأوقات، والرضا الداخلي يساعد بشكل كبير في استعادة الهدوء النفسي والتركيز الذهني.</p>
+        </div>
+
+        <div class="article-card">
+            <h5>2. بناء الثقة بالنفس وتعزيز لغة الحوار الداخلي الإيجابي</h5>
+            <p>الثقة بالنفس تبدأ من حديثك مع ذاتك. استبدل العبارات السلبية بأخرى محفزة، واحرص على تطوير مهاراتك باستمرار وعدم مقارنة نفسك بالآخرين.</p>
+        </div>
+
+        <div class="article-card">
+            <h5>3. الاستماع الفعال وتقوية الروابط الأسرية</h5>
+            <p>التواصل الناجح يعتمد على الإنصات للآخرين دون أحكام مسبقة، مما يخلق بيئة أسرية دافئة وآمنة نفسياً لجميع أفراد العائلة.</p>
+        </div>
+
+        <button onclick="closeSubPage()" class="btn-submit" style="background-color: var(--primary); margin-top: 20px;">العودة للرئيسية 🔙</button>
+    </div>
+
+    <!-- ================= صفحة دليل الصحة العامة المستقلة ================= -->
+    <div id="healthPage" class="card sub-page">
+        <h2 style="color: var(--primary); margin-top:0;">🩺 دليل الصحة العامة ورعاية الأسرة (مقالات للقراءة)</h2>
+        <p style="color: #4b5563; margin-bottom: 20px;">إرشادات طبية ومقالات مبسطة للعناية بالصحة العامة وصحة الأسرة والحوامل.</p>
+        
+        <div class="article-card">
+            <h5>1. أهمية التغذية المتوازنة لتعزيز المناعة</h5>
+            <p>تناول الخضروات، الفواكه الطازجة، وشرب كميات كافية من الماء يومياً يساهم بشكل مباشر في رفع كفاءة الجهاز المناعي وحماية الجسم من الأمراض.</p>
+        </div>
+
+        <div class="article-card">
+            <h5>2. إرشادات مبسطة لرعاية الحوامل وصحة الأم</h5>
+            <p>فترة الحمل تحتاج إلى متابعة دورية، راحة كافية، وتجنب الإجهاد البدني والنفسي، مع الحرص على تناول الفيتامينات الموصى بها طبياً.</p>
+        </div>
+
+        <div class="article-card">
+            <h5>3. جودة النوم وأثرها العميق على صحة الدماغ والجسم</h5>
+            <p>النوم المبكر والمنتظم لمدة تتراوح بين 7 إلى 8 ساعات ليلًا يجدد خلايا الجسم، يحسن الذاكرة، ويمنح الطاقة اللازمة ليوم حافل بالإنتاج.</p>
+        </div>
+
+        <button onclick="closeSubPage()" class="btn-submit" style="background-color: var(--primary); margin-top: 20px;">العودة للرئيسية 🔙</button>
     </div>
 
     <footer>
@@ -614,6 +651,18 @@
         }
     }
 
+    function openSubPage(pageId) {
+        document.getElementById('dashboardSection').style.display = 'none';
+        document.getElementById(pageId).style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function closeSubPage() {
+        document.querySelectorAll('.sub-page').forEach(el => el.style.display = 'none');
+        document.getElementById('dashboardSection').style.display = 'block';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
     function logoutAdmin() {
         document.getElementById('adminDashboard').style.display = 'none';
         document.getElementById('registerCard').style.display = 'block';
@@ -623,30 +672,30 @@
     const translations = {
         ar: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مرحلتك الدراسية واستمتع بالأقسام المجانية والتفاعلية.",
+            mainSubtitle: "المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مستواك أو حالتك واستمتع بالأقسام المجانية والتفاعلية.",
             lblName: "الاسم الكامل",
             lblEmail: "البريد الإلكتروني الآمن",
-            lblStage: "المرحلة الدراسية أو التعليمية",
+            lblStage: "المستوى، المرحلة أو الحالة",
             submitBtn: "انضم واستعرض المنصة",
-            welcomeBanner: "✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى كامل ومفيد."
+            welcomeBanner: "✨ أهلاً بك! تم تحديث المنظومة لتشمل معلمين الذكاء الاصطناعي الصوتي وحلقات القرآن وأقسام المقالات المستقلة."
         },
         en: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "Smart Global Trusted Ecosystem<br>Welcome. Choose your educational stage and enjoy free interactive sections.",
+            mainSubtitle: "Smart Global Trusted Ecosystem<br>Welcome. Choose your level or status.",
             lblName: "Full Name",
             lblEmail: "Secure Email",
-            lblStage: "Educational Level",
+            lblStage: "Level or Status",
             submitBtn: "Join & Browse",
-            welcomeBanner: "✨ Welcome! All sections are now fully included."
+            welcomeBanner: "✨ Welcome! AI voice tutors and article pages are now included."
         },
         fr: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "Écosystème Mondial Fiable<br>Bienvenue. Choisissez votre niveau éducatif.",
+            mainSubtitle: "Écosystème Mondial Fiable<br>Bienvenue. Choisissez votre statut.",
             lblName: "Nom complet",
             lblEmail: "E-mail sécurisé",
-            lblStage: "Niveau éducatif",
+            lblStage: "Niveau ou statut",
             submitBtn: "Rejoindre et Parcourir",
-            welcomeBanner: "✨ Bienvenue ! Toutes les sections sont incluses."
+            welcomeBanner: "✨ Bienvenue ! Les tuteurs vocaux IA sont inclus."
         }
     };
 
