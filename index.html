@@ -358,7 +358,7 @@
     <!-- نموذج التسجيل للزوار -->
     <div id="registerCard" class="card">
         <h1 id="mainTitle">FamilySphere</h1>
-        <p class="subtitle" id="mainSubtitle">المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مستواك واستمتع بالأقسام المجانية.</p>
+        <p class="subtitle" id="mainSubtitle">المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مرحلتك الدراسية واستمتع بالأقسام المجانية والتفاعلية.</p>
         
         <form id="registrationForm">
             <div class="form-group">
@@ -372,12 +372,14 @@
             </div>
 
             <div class="form-group">
-                <label id="lblStage" for="stage">المستوى أو الاهتمام</label>
+                <label id="lblStage" for="stage">المرحلة الدراسية أو التعليمية</label>
                 <select id="stage" name="المرحلة_التعليمية" required>
-                    <option value="" disabled selected>اختر مستواك...</option>
-                    <option value="مستكشف للمراحل المجانية الأولى والثانية">مستكشف للمراحل المجانية الأولى والثانية</option>
-                    <option value="طالب في المراحل المتقدمة">طالب في المراحل المتقدمة</option>
-                    <option value="شريك إعلاني أو باحث عن عمل">شريك إعلاني أو باحث عن عمل</option>
+                    <option value="" disabled selected>اختر مرحلتك الدراسية...</option>
+                    <option value="المرحلة الابتدائية">المرحلة الابتدائية</option>
+                    <option value="المرحلة الإعدادية أو المتوسطة">المرحلة الإعدادية أو المتوسطة</option>
+                    <option value="المرحلة الثانوية">المرحلة الثانوية</option>
+                    <option value="المرحلة الجامعية">المرحلة الجامعية</option>
+                    <option value="الدراسات العليا والبحث العلمي">الدراسات العليا والبحث العلمي</option>
                 </select>
             </div>
 
@@ -440,19 +442,27 @@
             ✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى مليء بالفوائد والكتب.
         </div>
 
-        <!-- 1. قسم القرآن الكريم -->
+        <!-- 1. قسم القرآن الكريم والعلوم الشرعية (مع تفعيل ميزة المعلمة والمعلم) -->
         <div class="section-box quran-sec">
             <h3>
-                <span>📖 قسم القرآن الكريم والعلوم الشرعية (نسائي ورجالي)</span>
+                <span>📖 قسم القرآن الكريم والعلوم الشرعية (قسم خاص للنساء ومعلمة قرآن وقسم للرجال مع معلم)</span>
                 <span class="badge free">مجاني بالكامل</span>
             </h3>
-            <p style="color: #4b5563; font-size: 0.95rem;">تلاوة خاشعة، تدبر مبسط، وخدمة التلقين والتجويد.</p>
+            <p style="color: #4b5563; font-size: 0.95rem;">تلاوة خاشعة، تدبر مبسط، وحلقات تلقين وإشراف تخصصي (للرجال والنساء).</p>
             <div class="list-item">
-                <span>🎧 تصفح القرآن، الاستماع، والمكتبة الصوتية</span>
+                <span>🎧 تصفح القرآن، الحلقات الصوتية، وجلسات التلقين</span>
                 <a class="action-link" style="background: var(--quran-color);" onclick="toggleContent('quranBox')">فتح محتوى القسم 📖</a>
             </div>
             <div id="quranBox" class="content-box">
-                <h4>مكتبة ومحتويات قسم القرآن الكريم والعلوم الشرعية:</h4>
+                <h4>مكتبة ومحتويات قسم القرآن الكريم والتجويد:</h4>
+                <div class="resource-item">
+                    <span>🧕 قسم النساء: حلقات ومراجعة الحفظ مع نخبة من معلمات القرآن الكريم والإجازات</span>
+                    <a class="resource-link" style="background: var(--quran-color);" onclick="alert('أهلاً بكِ أختنا الكريمة. يمكنكِ البدء في التنسيق لحلقات الحفظ والتلاوة مع المعلمات المختصات بكل خصوصية.');">التسجيل لحلقات النساء 🧕</a>
+                </div>
+                <div class="resource-item">
+                    <span>👨‍💼 قسم الرجال: حلقات التلقين والتجويد والمتابعة مع نخبة من معلمي القرآن</span>
+                    <a class="resource-link" style="background: var(--primary);" onclick="alert('أهلاً بك أخي الكريم. تم فتح نافذة التواصل والالتحاق بحلقات التلاوة والحفظ مع المعلمين المعتمدين.');">التسجيل لحلقات الرجال 👨‍💼</a>
+                </div>
                 <div class="resource-item">
                     <span>🎧 الاستماع لتلاوات هادئة ومريحة للقلوب</span>
                     <a class="resource-link" href="https://www.qurancentral.com" target="_blank">استماع مباشر 🎧</a>
@@ -460,10 +470,6 @@
                 <div class="resource-item">
                     <span>📚 مصحف التجويد والتدبر الميسر (تصفح وقراءة)</span>
                     <a class="resource-link" href="https://quran.com" target="_blank">تصفح المصحف 📖</a>
-                </div>
-                <div class="resource-item">
-                    <span>🎙️ خدمة التلقين والتسجيل مع المعلمين والشيخ إبراهيم</span>
-                    <a class="resource-link" onclick="alert('للانضمام لجلسات التلقين المباشرة، يرجى التواصل عبر البريد الداخلي للمنصة.');">حجز جلسة 🎙️</a>
                 </div>
             </div>
         </div>
@@ -582,30 +588,30 @@
     const translations = {
         ar: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مستواك واستمتع بالأقسام المجانية.",
+            mainSubtitle: "المنظومة العالمية الذكية والموثوقة<br>مرحباً بك. اختر مرحلتك الدراسية واستمتع بالأقسام المجانية والتفاعلية.",
             lblName: "الاسم الكامل",
             lblEmail: "البريد الإلكتروني الآمن",
-            lblStage: "المستوى أو الاهتمام",
+            lblStage: "المرحلة الدراسية أو التعليمية",
             submitBtn: "انضم واستعرض المنصة",
             welcomeBanner: "✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى مليء بالفوائد والكتب."
         },
         en: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "Smart Global Trusted Ecosystem<br>Welcome. Choose your level and enjoy free sections.",
+            mainSubtitle: "Smart Global Trusted Ecosystem<br>Welcome. Choose your educational stage and enjoy free interactive sections.",
             lblName: "Full Name",
             lblEmail: "Secure Email",
-            lblStage: "Level or Interest",
+            lblStage: "Educational Level",
             submitBtn: "Join & Browse",
-            welcomeBanner: "✨ Welcome! All sections are now included."
+            welcomeBanner: "✨ Welcome! All educational stages are now included."
         },
         fr: {
             mainTitle: "FamilySphere",
-            mainSubtitle: "Écosystème Mondial Fiable<br>Bienvenue. Choisissez votre niveau.",
+            mainSubtitle: "Écosystème Mondial Fiable<br>Bienvenue. Choisissez votre niveau éducatif.",
             lblName: "Nom complet",
             lblEmail: "E-mail sécurisé",
-            lblStage: "Niveau ou intérêt",
+            lblStage: "Niveau éducatif",
             submitBtn: "Rejoindre et Parcourir",
-            welcomeBanner: "✨ Bienvenue ! Toutes les sections sont incluses."
+            welcomeBanner: "✨ Bienvenue ! Tous les niveaux éducatifs sont inclus."
         }
     };
 
