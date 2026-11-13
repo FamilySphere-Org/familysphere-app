@@ -282,11 +282,10 @@
             background-color: #1d4ed8;
         }
 
-        /* تنسيق مشغل الفيديوهات المباشرة */
         .video-container {
             position: relative;
             width: 100%;
-            padding-bottom: 56.25%; /* نسبة أبعاد 16:9 */
+            padding-bottom: 56.25%;
             height: 0;
             margin-top: 15px;
             border-radius: 10px;
@@ -459,22 +458,22 @@
     <!-- لوحة المنصة للزوار العاديين -->
     <div id="dashboardSection">
         <div class="welcome-banner" id="welcomeBanner">
-            ✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى مليء بالفوائد والفيديوهات التعليمية.
+            ✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى كامل ومفيد.
         </div>
 
-        <!-- 1. قسم القرآن الكريم والعلوم الشرعية (نساء ورجال) -->
+        <!-- 1. قسم القرآن الكريم والتجويد -->
         <div class="section-box quran-sec">
             <h3>
-                <span>📖 قسم القرآن الكريم والتجويد (قسم خاص للنساء مع معلمة، وقسم للرجال مع معلم)</span>
+                <span>📖 قسم القرآن الكريم والتجويد (نساء ورجال)</span>
                 <span class="badge free">مجاني بالكامل</span>
             </h3>
             <p style="color: #4b5563; font-size: 0.95rem;">تلاوة خاشعة، تدبر مبسط، وحلقات تلقين وإشراف تخصصي.</p>
             <div class="list-item">
-                <span>🎧 تصفح القرآن، الحلقات الصوتية، وجلسات التلقين</span>
+                <span>🎧 استعراض الحلقات ومصادر التلاوة والتجويد</span>
                 <a class="action-link" style="background: var(--quran-color);" onclick="toggleContent('quranBox')">فتح محتوى القسم 📖</a>
             </div>
             <div id="quranBox" class="content-box">
-                <h4>مكتبة ومحتويات قسم القرآن الكريم والتجويد:</h4>
+                <h4>مكتبة ومحتويات قسم القرآن الكريم:</h4>
                 <div class="resource-item">
                     <span>🧕 قسم النساء: حلقات ومراجعة الحفظ مع نخبة من معلمات القرآن الكريم</span>
                     <a class="resource-link" style="background: var(--quran-color);" onclick="alert('أهلاً بكِ أختنا الكريمة. يمكنكِ التنسيق لحلقات الحفظ والتلاوة مع المعلمات المختصات بكل خصوصية.');">التسجيل لحلقات النساء 🧕</a>
@@ -490,7 +489,7 @@
             </div>
         </div>
 
-        <!-- 2. قسم الفيديوهات التعليمية المتنوعة والمباشرة -->
+        <!-- 2. قسم الفيديوهات التعليمية -->
         <div class="section-box teen-sec">
             <h3>
                 <span>🎬 قسم الفيديوهات التعليمية والمرئيات المتنوعة</span>
@@ -503,12 +502,10 @@
             </div>
             <div id="videoBox" class="content-box">
                 <h4>المكتبة المرئية والفيديوهات التعليمية:</h4>
-                
                 <p style="font-weight: bold; color: var(--primary); margin-top: 10px;">1. فيديو تلاوة وخشوع (تلاوة هادئة):</p>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/5qap5aO4i9A" allowfullscreen></iframe>
                 </div>
-
                 <p style="font-weight: bold; color: var(--primary); margin-top: 20px;">2. فيديو تطوير الذات والمهارات الشخصية:</p>
                 <div class="video-container">
                     <iframe src="https://www.youtube.com/embed/ScMzIvxBSi4" allowfullscreen></iframe>
@@ -554,7 +551,7 @@
             <div id="proBox" class="content-box">
                 <h4>مكتبة ومحتويات المراحل المتقدمة والأكاديمية:</h4>
                 <div class="resource-item">
-                    <span>📚 خرائط ذهنية وكتب أبحاث علمية متقدمة</span>
+                    <span>📚 خرائط ذهنية وكتب أبحاث علمية متقدمة للتحميل</span>
                     <a class="resource-link" onclick="alert('تم تجهيز مسارات الدبلوم والكتب الأكاديمية للتحميل والاستفادة.');">تحميل الكتب 📚</a>
                 </div>
                 <div class="resource-item">
@@ -580,6 +577,10 @@
                 <div class="resource-item">
                     <span>📝 استمارة التقديم على الوظائف المنزلية وإدارة المحتوى</span>
                     <a class="resource-link" onclick="alert('أهلاً بك. يمكنك البدء في استقبال المهام والأعمال الحرّة من بيتك.');">تقديم طلب 📝</a>
+                </div>
+                <div class="resource-item">
+                    <span>💡 دليل العمل عن بعد وتحقيق الدخل المستدام</span>
+                    <a class="resource-link" onclick="alert('يحتوي على خطوات عملية لاكتشاف المهارات والبدء بالعمل الحر.');">قراءة الدليل 💡</a>
                 </div>
             </div>
         </div>
@@ -627,7 +628,7 @@
             lblEmail: "البريد الإلكتروني الآمن",
             lblStage: "المرحلة الدراسية أو التعليمية",
             submitBtn: "انضم واستعرض المنصة",
-            welcomeBanner: "✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى مليء بالفوائد والفيديوهات التعليمية."
+            welcomeBanner: "✨ أهلاً بك! تم تحديث المنظومة لتفتح جميع الأقسام بسلاسة وبمحتوى كامل ومفيد."
         },
         en: {
             mainTitle: "FamilySphere",
@@ -636,7 +637,7 @@
             lblEmail: "Secure Email",
             lblStage: "Educational Level",
             submitBtn: "Join & Browse",
-            welcomeBanner: "✨ Welcome! All educational stages are now included."
+            welcomeBanner: "✨ Welcome! All sections are now fully included."
         },
         fr: {
             mainTitle: "FamilySphere",
@@ -645,7 +646,7 @@
             lblEmail: "E-mail sécurisé",
             lblStage: "Niveau éducatif",
             submitBtn: "Rejoindre et Parcourir",
-            welcomeBanner: "✨ Bienvenue ! Tous les niveaux éducatifs sont inclus."
+            welcomeBanner: "✨ Bienvenue ! Toutes les sections sont incluses."
         }
     };
 
